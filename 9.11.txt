@@ -1,0 +1,358 @@
+Sub f()
+
+Dim i As Integer
+
+For i = 111 To 2 Step -1
+
+    
+    '处理性别'
+
+    If Range("e" & i) = "男" Then
+        Range("f" & i) = "先生"
+    ElseIf Range("e" & i) = "女" Then
+        
+        Range("f" & i) = "女士"
+    Else
+        Range("f" & i) = ""
+    End If
+    
+        
+        
+    '处理专业代码'
+    If Range("b" & i) = "理工" Then
+        Range("c" & i) = "lg"
+        
+    ElseIf Range("b" & i) = "文科" Then
+        Range("c" & i) = "wk"
+        
+    ElseIf Range("b" & i) = "财经" Then
+        Range("c" & i) = "cj"
+    Else
+        Range("c" & i) = ""
+    End If
+    
+    '删除数据'
+    '从下往上走'
+    
+    If Range("d" & i) = "" Then
+        Range("d" & i).Select
+        Selection.EntireRow.Delete
+    End If
+    
+    
+          
+    Next
+    
+    
+    
+End Sub
+
+
+Sub 宏1()
+'
+' 宏1 宏
+'
+
+'
+Dim i As Integer
+
+For i = 2 To 2222 Step 2
+ '判断应该按在复制处理之前'
+     If Range("A" & i) = "" Then
+        Exit For
+    End If
+
+
+    Rows("1:1").Select
+    Selection.Copy
+    Range("A" & i).Select
+    Selection.Insert Shift:=xlDown
+
+    
+    
+Next
+End Sub
+
+
+Sub gs()
+
+Dim i As Integer
+
+For i = 1 To 2000
+
+    If Range("d" & i) = "" Then
+    
+        Exit For
+    End If
+    
+    
+
+     If Range("d" & i) - 3500 <= 0 Then
+        Range("e" & i) = 0
+    ElseIf Range("d" & i) - 3500 > 0 And Range("d" & i) - 3500 <= 1500 Then
+    Range("e" & i) = (Range("d" & i) - 3500) * 0.03
+    
+    ElseIf Range("d" & i) - 3500 > 1500 And Range("d" & i) - 3500 <= 4500 Then
+    Range("e" & i) = (Range("d" & i) - 3500) * 0.03
+    
+    ElseIf Range("d" & i) - 3500 > 0 And Range("d" & i) - 3500 <= 1500 Then
+    Range("e" & i) = (Range("d" & i) - 3500) * 0.1 - 105
+    
+    ElseIf Range("d" & i) - 3500 > 4500 And Range("d" & i) - 3500 <= 9000 Then
+    Range("e" & i) = (Range("d" & i) - 3500) * 0.2 - 555
+    
+    ElseIf Range("d" & i) - 3500 > 9000 And Range("d" & i) - 3500 <= 35000 Then
+    Range("e" & i) = (Range("d" & i) - 3500) * 0.25 - 1005
+    
+    ElseIf Range("d" & i) - 3500 > 35000 And Range("d" & i) - 3500 <= 55000 Then
+    Range("e" & i) = (Range("d" & i) - 3500) * 0.3 - 2755
+    
+    ElseIf Range("d" & i) - 3500 > 55000 And Range("d" & i) - 3500 <= 80000 Then
+    Range("e" & i) = (Range("d" & i) - 3500) * 0.35 - 5505
+    
+    ElseIf Range("d" & i) - 3500 > 80000 Then
+    Range("e" & i) = (Range("d" & i) - 3500) * 0.03 - 13505
+    
+    End If
+    
+
+Next
+End Sub
+
+
+
+Sub 宏10()
+'
+' 宏10 宏
+'
+
+'
+
+'  '选择表头的操作'
+
+    Range("B1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-1]"
+    Range("B2").Select
+    
+    
+    
+    '单列数据的计算完成'
+
+Dim i As Integer
+
+For i = 2 To 1900
+    If Range("a" & i) = "" Then
+        Exit For
+    End If
+    
+
+    ActiveCell.FormulaR1C1 = "=RC[-1]/R2C1-1"
+    ActiveCell.Offset(1, 0).Range("A1").Select
+
+Next
+
+End Sub
+
+
+"两列数据处理完毕"
+
+
+Sub 宏4()
+'
+' 宏4 宏
+'
+
+'
+
+'先选定起始单元格'
+
+
+Dim i As Integer
+
+For i = 2 To 1900
+    If Range("a" & i) = "" Then
+        Exit For
+    End If
+    
+    
+Range("S1").Select
+
+
+    '第一列的净值计算'
+    
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    Range("S" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C3-1"
+   
+    
+    Range("T1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    Range("T" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C4-1"
+Next
+
+
+
+    
+End Sub
+
+
+
+
+"跟踪模板的VBA完成了"
+
+
+'设置一个全局变量'
+Public num As Integer
+
+Sub 宏4()
+'
+' 宏4 宏
+'
+
+'
+
+'先选定起始单元格'
+
+
+
+
+Dim i As Integer
+
+For i = 2 To 1900
+    If Range("a" & i) = "" Then
+        num = i
+        
+        Exit For
+    End If
+    
+    
+Range("S1").Select
+
+
+    '第一列的净值计算'
+    
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    Range("S" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C3-1"
+   
+    
+    Range("T1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("T" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C4-1"
+    
+    Range("u1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("u" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C5-1"
+    
+    
+    
+    
+    
+        Range("v1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("v" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C6-1"
+    
+    
+    
+        
+        Range("w1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("w" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C7-1"
+    
+    
+            Range("x1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("x" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C8-1"
+    
+    
+                Range("y1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("y" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C9-1"
+    
+    
+    
+               Range("z1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("z" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C10-1"
+    
+    
+                   Range("aa1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("aa" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C11-1"
+    
+    
+                       Range("ab1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("ab" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C12-1"
+    
+        
+                       Range("ac1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("ac" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C13-1"
+    
+    
+    
+        
+                       Range("ad1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("ad" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C14-1"
+    
+    
+        
+                       Range("ae1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("ae" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C15-1"
+    
+    
+        
+                       Range("af1").Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]"
+    
+    Range("af" & i).Select
+    ActiveCell.FormulaR1C1 = "=RC[-16]/R2C16-1"
+    
+    
+  
+    
+    
+    
+    
+    
+    
+Next
+
+
+'作图的动作'
+    ActiveCell.Offset(-3, -3).Range("A1:B115").Select
+    ActiveCell.Offset(0, -3).Range("A1").Activate
+    ActiveSheet.Shapes.AddChart2(227, xlLine).Select
+    ActiveChart.SetSourceData Source:=Range("Sheet1!$S$1:$af$" & num)
+
+    
+End Sub
+

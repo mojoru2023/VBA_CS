@@ -1,0 +1,85 @@
+
+
+Sub gys()
+
+Dim i As Integer
+
+For i = 1 To 100 Step 7
+
+
+Range("A" & i).Select
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .Color = 65535
+        .TintAndShade = 0
+        .PatternTintAndShade = 0
+    End With
+Next
+
+End Sub
+
+
+Sub f()
+
+Dim i As Integer
+
+For i = 1 To 111
+    
+    '处理性别'
+
+    If Range("e" & i) = "男" Then
+        Range("f" & i) = "先生"
+    Else
+        Range("f" & i) = "女士"
+    End If
+    
+        
+    Next
+    
+    
+    
+End Sub
+
+
+
+
+
+Sub f()
+
+Dim i As Integer
+
+For i = 1 To 111
+    
+    '处理性别'
+
+    If Range("e" & i) = "男" Then
+        Range("f" & i) = "先生"
+    ElseIf Range("e" & i) = "女" Then
+        
+        Range("f" & i) = "女士"
+    Else
+        Range("f" & i) = ""
+    End If
+    
+        
+        
+    '处理专业代码'
+    If Range("b" & i) = "理工" Then
+        Range("c" & i) = "lg"
+        
+    ElseIf Range("b" & i) = "文科" Then
+        Range("c" & i) = "wk"
+        
+    ElseIf Range("b" & i) = "财经" Then
+        Range("c" & i) = "cj"
+    Else
+        Range("c" & i) = ""
+    End If
+          
+    Next
+    
+    
+    
+End Sub
+
