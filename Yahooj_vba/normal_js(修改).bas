@@ -1,4 +1,5 @@
 Attribute VB_Name = "模块1"
+'设置一个全局变量'
 Public num As Integer
 
 
@@ -11,10 +12,11 @@ Sub 宏2()
 
 For i = 2 To 19000
     If Range("a" & i) = "" Then
+          num = i
         Exit For
+        
     End If
     
-
 
 Range("V1").Select
 ActiveCell.FormulaR1C1 = "=RC[-19]"
@@ -120,16 +122,19 @@ ActiveCell.FormulaR1C1 = "=RC[-19]/R2C19-1"
 
 
 
+
 Next
 
-        
-    ActiveCell.Offset(-65, -28).Range("A1:V" & i).Select
-    ActiveCell.Offset(0, -3).Range("A1").Activate
-    ActiveSheet.Shapes.AddChart2(227, xlLine).Select
-    ActiveChart.SetSourceData Source:=Range("Sheet2!$V$1:$AL$" & i)
 
-    
+
+'作图的动作'
+    Range("V1:AL" & num).Select
+    Range("AH169").Activate
+    ActiveSheet.Shapes.AddChart2(227, xlLine).Select
+    ActiveChart.SetSourceData Source:=Range("Sheet1!$V$1:$AL$" & num)
+
 End Sub
+
 
 
 
