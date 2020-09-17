@@ -1,0 +1,13 @@
+[成功] 安装成功尽情冲浪！
+你的服务器地址（IP）： 172.104.85.49 
+你的密码            ： flyzy2005.com 
+你的端口            ： 1024 
+你的加密方式        ： aes-256-cfb 
+欢迎访问flyzy小站   ： https://www.flyzy2005.com 
+你的ss链接： ss://YWVzLTI1Ni1jZmI6Zmx5enkyMDA1LmNvbUAxNzIuMTA0Ljg1LjQ5OjEwMjQ= 
+[root@li1695-49 ~]# 
+
+
+vim /etc/shadowsocks.json
+
+111.19.40.125  23570

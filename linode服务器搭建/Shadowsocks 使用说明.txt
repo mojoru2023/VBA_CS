@@ -1,0 +1,90 @@
+Shadowsocks 使用说明
+https://github.com/shadowsocks/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E
+
+
+        sudo add-apt-repository ppa:hzwhuang/ss-qt5 
+        sudo apt-get update 
+        sudo apt-get install shadowsocks-qt5 
+
+
+{ 
+"server":"servier_ip", 
+"server_port":65432, 
+"password":"password", 
+"timeout":60, 
+"method":"rc4-md5" 
+}
+
+
+    sslocal -s server_ip -p 65432 -k "password" -l1080 -t 600 -m rc4-md5 
+
+
+后台启动和停止
+ssserver -c /etc/shadowsocks.json -d start 
+ssserver -c /etc/shadowsocks.json -d stop
+ssserver -c /etc/shadowsocks.json -d stop
+
+
+设置开机时启动VPN服务: 
+
+echo "/usr/local/bin/ss-server -c /config.json -f /tmp/ss-server.pid" >> /etc/rc.local
+
+
+
+/****** 单用户 ******/ 
+{ 
+ "server":"139.162.124.107",  // 这里填写你的服务器的IP地址
+ "server_port":8234,          // 这是填自定义的shadowsocks的端口，如 7777 或 8234等等，但要避免使用常用端口如：80，3306，3389，21，20等。
+ "local_address":"120.0.0.1", // 默认填写120.0.0.1即可 
+ "local_port":1080,           // 默认填写1080即可 
+ "password":"123456+bb",       // ***为自定义的密码
+ "timeout":300,               // 超时300秒
+ "method":"aes-256-cfb",      // 加密方式 aes-256-cfb
+ "fast_open":false 
+ }
+
+
+最终编写的版本
+
+[root@li1608-107 ~]# vim /etc/shadowsocks.json
+{
+	"server":"139.162.19.43",
+
+	"server_port":8388,
+	"local_adress":"127.0.0.1",
+	"local_port":1080,
+	"password":"123456+bb",
+	"timeout":300,
+	"method":"aes-256-cfb",
+	"fast_open":false
+}
+
+
+客户端设定
+sslocal -s 139.162.124.107 -p 8388 -k "123456+bb" -l1080 -t 300 -m aes-256-cfb
+
+sslocal -s 139.162.124.107 -p 8234 -k "123456+bb" -l1080 -t 300 -m aes-256-cfb
+
+firewall-cmd --zone=public --add-port=15201/tcp --permanent
+
+
+1.vps购买
+２．ss安装并开启！
+３．要想办法在笔记本电脑上设置全局代理！
+无法扩展到全局代理！？
+shadowsocks-qt5
+4.还要在浏览器中设置
+
+查看端口
+
+netstat -anptl
+
+
+1.服务器设置　vps
+2.客户端设置 ss qt5
+3.配置
+４．浏览器配置注意
+注意
+
+1. 服务器上和客户端你的端口设置也要一致！
+

@@ -1,0 +1,88 @@
+worksheets工作表对象 
+
+
+有哪些操作
+
+Select
+Add
+Delete
+Copy
+
+
+哪些信息可以获取
+Count
+Name
+
+Sheets("1月").Select
+Sheets(1).Select
+
+[a1] =6
+
+Sheets.Add after:=Sheet1,count:=3
+
+for i = 1 to 100
+	
+	Sheets.Add after:=Sheet1
+next
+
+Sheets.Range("a1")=66
+
+
+顺次往后插入sheet
+dim i as Integer
+for i =1 to 12 
+
+Sheets.Add after:=Sheets(Sheets.Count)
+Sheets(Sheets.Count)=i &"月"
+
+next 
+
+批量删除100张表
+Excel.Application.DisplayAlter=False
+for i = 1 to 100
+Sheets(1).Delete
+next
+Excel.Application.DisplayAlter=True
+
+
+新建100张表
+Sheets.Add Count:100
+
+
+Sheets.Copy after:=Sheets(Sheets.Count)
+
+
+顺次取表名
+for i 2 to Sheets.Count
+Sheets.Range("a" &i -1) = Sheets(i).Name
+next
+
+
+一个需求
+
+循环31次 i
+复制表  (在所有表后面)
+最后这张表的名字=5月x日
+表的E5单元格=2016-5-X
+结束循环
+
+
+for i = 1 to 31
+	Sheet1.Copy after:=Sheets(Sheets.Count)
+	Sheets(Sheets.Count).Name = "5月"& i &"日"
+	Sheets(Sheets.Count).Range("e5") = "2016-5-" & i
+next
+
+
+合并多个表，汇总一个表
+循环2 到Sheets.Count
+
+取值
+结束循环
+
+for i = 2 to Sheets.Count
+	Sheet1.Range("b" & i+8)=Sheets(i).Range("e5")
+	Sheet1.Range("c" & i+8)=Sheets(i).Range("e6")
+	Sheet1.Range("d" & i+8)=Sheets(i).Range("e44")
+next
+
