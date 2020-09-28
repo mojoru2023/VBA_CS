@@ -30,154 +30,156 @@ ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
 Range("AM1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AM" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C4-1"
+
+
 
 Range("AN1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AN" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C5-1"
 
 Range("AO1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AO" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C6-1"
 
 Range("AP1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AP" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C7-1"
 
 Range("AQ1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AQ" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C8-1"
 Range("AR1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AR" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C9-1"
 
 Range("AS1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AS" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C10-1"
 
 Range("AT1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AT" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C11-1"
 
 Range("AU1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AU" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C12-1"
 Range("AV1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AV" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C13-1"
 Range("AW1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AW" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C14-1"
 Range("AX1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AX" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C15-1"
 Range("AY1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AY" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C16-1"
 Range("AZ1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("AZ" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C17-1"
 Range("BA1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BA" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C18-1"
 
 
 Range("BB1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BB" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C19-1"
 
 Range("BC1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BC" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C20-1"
 Range("BD1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BD" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C21-1"
 
 Range("BE1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BE" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C22-1"
 Range("BF1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BF" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C23-1"
 
 Range("BG1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BG" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C24-1"
 
 Range("BH1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BH" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C25-1"
 
 Range("BI1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BI" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C26-1"
 
 Range("BJ1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BJ" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C27-1"
 
 Range("BK1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BK" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C28-1"
 
 Range("BL1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BL" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C29-1"
 
 Range("BM1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BM" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C30-1"
 
 Range("BN1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BN" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C31-1"
 
 
 Range("BO1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BO" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C32-1"
 
 Range("BP1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BP" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C33-1"
 Range("BQ1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BQ" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C34-1"
 
 Range("BR1").Select
 ActiveCell.FormulaR1C1 = "=RC[-35]"
 Range("BR" & i).Select
-ActiveCell.FormulaR1C1 = "=RC[-35]/R2C3-1"
+ActiveCell.FormulaR1C1 = "=RC[-35]/R2C35-1"
 
 
 
