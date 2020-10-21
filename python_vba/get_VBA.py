@@ -23,7 +23,7 @@ for a_i,num in zip(f_alist[start_index:end_index+1],range(3,255)):
     try:
         with open('p_vba.txt', 'a') as file_handle:
             # .txt可以不自己新建,代码会自动新建
-            file_handle.write(f_code + ",")  # 写入
+            file_handle.write(f_code + "")  # 写入
             file_handle.write('\n')  # 有时放在循环里面需要自动转行，不然会覆盖上一条数据
             print("{0} 整理完毕".format("p_Vba.txt"))
     except:
