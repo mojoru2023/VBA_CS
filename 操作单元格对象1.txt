@@ -1,0 +1,138 @@
+Sub a()
+
+Dim rng As Range
+
+[a1].Select
+Cells(2, 3).Select
+Range("a1:a6").Select
+Range("c1").Value = 1
+
+
+Sheets("1月").Select
+
+Range("a1").Offset(10, 0).Select
+
+
+For Each rng In Range("a1:b" & Range("a66536").End(xlUp).Row)。。
+    If rng.Offset(0, -1) = "男" Then
+        rng = "先生"
+    elif
+        rng = "女士"
+       End If
+       
+    
+    
+    Next
+    
+
+
+
+
+
+End Sub
+
+Sub ss()
+
+Range("a66536").End(xlUp).Row
+
+
+
+End Sub
+
+Sub ss()
+
+Range("a1").Resize(0, 4).Select
+
+Range("a1").EntireColumn.Select
+Range("a").EntireRow.Select
+
+Range("a7:l7").Copy ("n1")
+
+
+Range("a").EntireRow.Copy ("a12")
+
+
+
+
+End Sub
+
+Sub ss()
+
+
+Dim rng As Range
+
+For Each rng In Range("r21:z21")
+Range.Resize(2, 1).Merge
+Next
+
+
+End Sub
+
+
+
+Sub cf()
+Dim i, j, k As Integer
+
+
+
+For j = 2 To Sheets.Count
+
+
+For i = 2 To Sheet1.Range("a66536").End(xlUp).Row
+    If Sheet1.Range("d" & i) = Sheets(j).Name Then
+        k = Sheets(j).Range("a65536").End(xlUp).Row
+        Sheet1.Range("d" & i).EntireRow.Copy Sheets(j).Range("a" & k + 1)
+                 
+
+    
+     
+    End If
+    
+Next
+Next
+
+
+
+Sub cf()
+Dim i, j, k As Integer
+
+Call s
+
+
+For j = 2 To Sheets.Count
+
+
+For i = 2 To Sheet1.Range("a66536").End(xlUp).Row
+    If Sheet1.Range("d" & i) = Sheets(j).Name Then
+        k = Sheets(j).Range("a65536").End(xlUp).Row
+        Sheet1.Range("d" & i).EntireRow.Copy Sheets(j).Range("a" & k + 1)
+                 
+
+    
+     
+    End If
+    
+Next
+Next
+
+
+
+
+End Sub
+
+
+
+Sub s()
+
+For i = 2 To Sheets.Count
+
+    Sheets(i).Range("a2:a10000").clearContent
+    
+    
+End Sub
+
+
+
+
+End Sub
+

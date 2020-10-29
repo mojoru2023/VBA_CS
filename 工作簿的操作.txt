@@ -1,0 +1,132 @@
+for each
+
+Sub te()
+
+
+Dim ge As Range
+
+For Each ge In Range("a1:a10")
+
+    ge = 6
+    Next
+
+    
+End Sub
+
+
+
+Sub te()
+
+
+Dim ge As Range
+Dim i As Integer
+
+
+For Each ge In Range("a1:a10")
+i = i + 1
+
+    ge = i
+    Next
+
+    
+End Sub
+
+
+
+Sub se()
+
+Dim biao As Worksheet
+Application.DisplayAlerts = False
+
+For Each biao In Sheet
+    If biao.Name <> "决不能删" Then
+        biao.Delete
+        End If
+        
+Application.DisplayAlerts = False '不用跳出来确认是否删除'
+
+Next
+
+End Sub
+
+
+
+Sub se()
+
+Dim rng As Range
+
+For Each rng In Range("a1:a22")
+    If rng = "" Then
+        rng.EntireRow.Delete
+        End If
+        
+    
+
+Next
+
+
+End Sub
+
+
+Sub se()
+
+Workbooks.Open fiename = "d:\s.xlsx"
+ActiveWorkbook.Sheets(1).Range("a1") = "asdfa"
+ActiveWorkbook.Save
+Workbooks.Close
+
+
+
+
+End Sub
+Sub se()
+
+Application.ScreenUpdating = False
+
+
+
+Application.DisplayAlerts = False
+
+
+Workbooks.Open fiename = "d:\s.xlsx"
+ActiveWorkbook.Sheets(1).Range("a1") = "asdfa"
+ActiveWorkbook.Save
+Workbooks.Close
+
+Application.DisplayAlerts = True
+Application.ScreenUpdating = True
+
+
+
+
+End Sub
+
+
+Sub ding()
+Workbooks.Add
+ActiveWorkbook.Sheets(1).Range("a1") = "weraewr"
+ActiveWorkbook.SaveAs Filename = "d:\adf.xlsx"
+ActiveWorkbook.Close
+
+
+
+
+
+
+End Sub
+
+
+Sub s()
+
+Dim sht As Workbook
+Dim i, j As Integer
+
+
+For Each sht In Sheets
+    sht.Copy
+    ActiveWorkbook.SaveAs Filename = "d:\" & sht.Name & ".xlx"
+    ActiveWorkbook.Close
+    
+    
+    
+End Sub

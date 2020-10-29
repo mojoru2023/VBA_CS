@@ -1,0 +1,9 @@
+0 16 * * *  /usr/bin/python3 /root/cron_AHS300_.py
+0 16 * * *  /usr/bin/python3 /root/cronb_jspMons.py
+0 16 * * *  /usr/bin/python3 /root/cron_OneIndustryDetail.py
+0 16 * * *  /usr/bin/python3 /root/Tokyo_TechStack_cron.py
+0 16 * * *  /usr/bin/python3 /root/JS_industry_cron.py
+
+
+
+sz ash300_Mons.xlsx  js_industryDT.xlsx  JS_Mons.xlsx ODDjs.xlsx Tokyo_TSN.xlsx
