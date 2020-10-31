@@ -1,0 +1,55 @@
+Sub chf()
+Dim i As Interior
+
+For i = 2 To Sheets.Count
+    Sheet1.Range("a1:d1064").AutoFilter Field:=3, Criteria1:=Sheets(i).Name
+    Sheet1.Range("a1:d1606").Copy Sheet(i).Range("a1")
+    Next
+    
+    Selection.AutoFilter
+    
+    
+End Sub
+
+
+
+Sheets.Add after:=Sheets(Sheets.Count)
+
+Sheets(Sheets.Count).Name = "123"
+
+Sheets.Add(after:=Sheets(Sheets.Count)).Name = "666"
+
+
+    If k = 0 Then
+    Sheets.Add after:=Sheets(Sheets.Count)
+    
+    Sheets(Sheets.Count).Name = Sheet1.Range("a1")
+    
+End If
+
+
+
+Sub jinjianbaiao()
+
+Dim sht As Worksheets
+Dim k As Integer
+
+For Each sht In Sheets
+    If sht.Name = Sheet1.Range("a") Then
+        k = 1
+    End If
+Next
+
+
+    If k = 0 Then
+    Sheets.Add after:=Sheets(Sheets.Count)
+    
+    Sheets(Sheets.Count).Name = Sheet1.Range("a1")
+    
+End If
+
+    
+
+
+
+End Sub
