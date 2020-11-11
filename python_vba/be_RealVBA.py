@@ -22,15 +22,15 @@ start_index=f_alist.index("IW") # 修改处1
 end_index=f_alist.index("SN") # 修改处2
 len_str =end_index-start_index+3
 print(len_str)
-# def into_file(f_name,item_name):
-#     try:
-#         with open('{0}.bas'.format(f_name), 'a') as file_handle:
-#
-#             file_handle.write(item_name + "")  # 写入
-#             file_handle.write('\n')  # 有时放在循环里面需要自动转行，不然会覆盖上一条数据
-#             print("{0} 整理完毕".format(f_name))
-#     except:
-#         pass
+def into_file(f_name,item_name):
+    try:
+        with open('{0}.bas'.format(f_name), 'a') as file_handle:
+
+            file_handle.write(item_name + "")  # 写入
+            file_handle.write('\n')  # 有时放在循环里面需要自动转行，不然会覆盖上一条数据
+            print("{0} 整理完毕".format(f_name))
+    except:
+        pass
 
 
 
