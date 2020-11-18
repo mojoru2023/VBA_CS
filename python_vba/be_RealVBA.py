@@ -18,8 +18,8 @@ for i1 in alphabet:
         f_al =i1+i2
         f_alist.append(f_al)
 
-start_index=f_alist.index("IW") # 修改处1
-end_index=f_alist.index("SN") # 修改处2
+start_index=f_alist.index("DU") # 修改处1
+end_index=f_alist.index("IJ") # 修改处2
 len_str =end_index-start_index+3
 print(len_str)
 def into_file(f_name,item_name):
@@ -38,13 +38,13 @@ def into_file(f_name,item_name):
 if __name__=="__main__":
 
 
-    into_file("big_v",head_str)
+    into_file("ZGG_",head_str)
     for a_i,num in zip(f_alist[start_index:end_index+1],range(3,end_index-start_index+3+1)):
 
         f_code=str_1.format(a_i,num,len_str)
-        into_file("big_v",f_code)
+        into_file("ZGG_",f_code)
 
-    into_file("big_v", tail_str.format(f_alist[start_index],f_alist[end_index]))
+    into_file("ZGG_", tail_str.format(f_alist[start_index],f_alist[end_index]))
 
 
 
