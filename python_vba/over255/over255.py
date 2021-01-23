@@ -14,7 +14,7 @@ head_str='Public num As Integer\nSub s()\nDim i As Integer\nFor i = 2 To 9999\nI
 
 
 tail_next = '\nNext'
-tail_images = 'ActiveSheet.Shapes.AddChart2(227, xlLine).Select\nActiveChart.SetSourceData Source:=Range("Sheet1!${0}$1:${1}$"& num)'
+tail_images = 'Range("{0}1:{1}" & num).Select\nActiveSheet.Shapes.AddChart2(227, xlLine).Select\nActiveChart.SetSourceData Source:=Range("Sheet1!${0}$1:${1}$" & num)'
 tail_end = '\nEnd Sub'
 
 str_1 = ' Range("{0}1").Select\nActiveCell.FormulaR1C1 = "=RC[-{2}]"\nRange("{0}" & i).Select \n ActiveCell.FormulaR1C1 = "=RC[-{2}]/R2C{1}-1"'

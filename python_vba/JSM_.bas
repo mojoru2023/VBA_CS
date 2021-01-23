@@ -1451,12 +1451,6 @@ ActiveCell.FormulaR1C1 = "=RC[-363]"
 Range("AAX" & i).Select 
  ActiveCell.FormulaR1C1 = "=RC[-363]/R2C363-1"
 Next
-ActiveSheet.Shapes.AddChart2(227, xlLine).Select
-ActiveChart.SetSourceData
-Source := Range("Sheet1!$C$1:$G$"& num)
-Source := Range("Sheet1!$i$1:$n$" & num)
-
-
 Range("NB1:AAX" & num).Select
 ActiveSheet.Shapes.AddChart2(227, xlLine).Select
 ActiveChart.SetSourceData Source:=Range("Sheet1!$NB$1:$AAX$" & num)

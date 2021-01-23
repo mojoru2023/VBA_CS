@@ -1452,11 +1452,14 @@ Range("AAX" & i).Select
  ActiveCell.FormulaR1C1 = "=RC[-363]/R2C363-1"
 
 Next
+Range("NB1:SU" & num).Select
 ActiveSheet.Shapes.AddChart2(227, xlLine).Select
-ActiveChart.SetSourceData Source:=Range("Sheet1!$NB$1:$SU$"& num)
+ActiveChart.SetSourceData Source:=Range("Sheet1!$NB$1:$SU$" & num)
+Range("SV1:WQ" & num).Select
 ActiveSheet.Shapes.AddChart2(227, xlLine).Select
-ActiveChart.SetSourceData Source:=Range("Sheet1!$SV$1:$WQ$"& num)
+ActiveChart.SetSourceData Source:=Range("Sheet1!$SV$1:$WQ$" & num)
+Range("WR1:AAX" & num).Select
 ActiveSheet.Shapes.AddChart2(227, xlLine).Select
-ActiveChart.SetSourceData Source:=Range("Sheet1!$WR$1:$AAX$"& num)
+ActiveChart.SetSourceData Source:=Range("Sheet1!$WR$1:$AAX$" & num)
 
 End Sub
