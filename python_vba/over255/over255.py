@@ -71,7 +71,8 @@ if __name__=="__main__":
         into_file("JSM_Over255",f_code)
     into_file("JSM_Over255",tail_next)
 
-    into_file("JSM_Over255", tail_images.format(f_alist[start_index],f_alist[start_index+249]))
+    into_file("JSM_Over255", tail_images.format(f_alist[start_index],f_alist[start_index+149]))
+    into_file("JSM_Over255", tail_images.format(f_alist[start_index+150],f_alist[start_index+249]))
     into_file("JSM_Over255", tail_images.format(f_alist[start_index+250],f_alist[end_index]))
     into_file("JSM_Over255",tail_end)
 

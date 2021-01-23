@@ -1453,7 +1453,9 @@ Range("AAX" & i).Select
 
 Next
 ActiveSheet.Shapes.AddChart2(227, xlLine).Select
-ActiveChart.SetSourceData Source:=Range("Sheet1!$NB$1:$WQ$"& num)
+ActiveChart.SetSourceData Source:=Range("Sheet1!$NB$1:$SU$"& num)
+ActiveSheet.Shapes.AddChart2(227, xlLine).Select
+ActiveChart.SetSourceData Source:=Range("Sheet1!$SV$1:$WQ$"& num)
 ActiveSheet.Shapes.AddChart2(227, xlLine).Select
 ActiveChart.SetSourceData Source:=Range("Sheet1!$WR$1:$AAX$"& num)
 
