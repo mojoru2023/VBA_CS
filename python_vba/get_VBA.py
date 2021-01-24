@@ -14,18 +14,18 @@ for i1 in alphabet:
         f_al =i1+i2
         f_alist.append(f_al)
 
-start_index=f_alist.index("IW")
-end_index=f_alist.index("SN")
+start_index=f_alist.index("HW")
+end_index=f_alist.index("QL")
 for a_i,num in zip(f_alist[start_index:end_index+1],range(3,255)):
     f_code=str_1.format(a_i,num)
 
 
     try:
-        with open('p_vba.txt', 'a') as file_handle:
+        with open('225_ALL.txt', 'a') as file_handle:
             # .txt可以不自己新建,代码会自动新建
             file_handle.write(f_code + "")  # 写入
             file_handle.write('\n')  # 有时放在循环里面需要自动转行，不然会覆盖上一条数据
-            print("{0} 整理完毕".format("p_Vba.txt"))
+            print("{0} 整理完毕".format("225_ALL.txt"))
     except:
         pass
 

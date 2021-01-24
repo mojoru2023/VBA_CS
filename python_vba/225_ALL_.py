@@ -18,20 +18,9 @@ for i1 in alphabet:
         f_al =i1+i2
         f_alist.append(f_al)
 
-
-
-for i1 in alphabet:
-    for i2 in alphabet:
-        for i3 in alphabet:
-
-            f_al =i1+i2+i3
-            f_alist.append(f_al)
-
-
 start_index=f_alist.index("HV") # 修改处1
-end_index=f_alist.index("OL") # 修改处2
+end_index=f_alist.index("QL") # 修改处2
 len_str =end_index-start_index+3
-print(len_str)
 def into_file(f_name,item_name):
     try:
         with open('{0}.bas'.format(f_name), 'a') as file_handle:
@@ -48,13 +37,13 @@ def into_file(f_name,item_name):
 if __name__=="__main__":
 
 
-    into_file("JSM_",head_str)
+    into_file("225_ALL",head_str)
     for a_i,num in zip(f_alist[start_index:end_index+1],range(3,end_index-start_index+3+1)):
 
         f_code=str_1.format(a_i,num,len_str)
-        into_file("JSM_",f_code)
+        into_file("225_ALL",f_code)
 
-    into_file("JSM_", tail_str.format(f_alist[start_index],f_alist[end_index]))
+    into_file("225_ALL", tail_str.format(f_alist[start_index],f_alist[end_index]))
 
 
 
