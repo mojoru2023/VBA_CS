@@ -103,7 +103,7 @@ if __name__=="__main__":
     # 1.读取excel文件
 
     # 打开excel
-    wb = xlrd.open_workbook('Follw_JS_20210312.xlsx')
+    wb = xlrd.open_workbook('Shipping_industry.xlsx')
     # 按工作簿定位工作表
     sh = wb.sheet_by_name('Sheet1')
     f_ncols = sh.ncols
@@ -115,13 +115,13 @@ if __name__=="__main__":
 
 
 
-    into_file("te",head_str)
+    into_file("Shipping_industry",head_str)
     for a_i,num in zip(f_alist[start_index:end_index+1],range(3,end_index-start_index+3+1)):
 
         f_code=str_1.format(a_i,num,len_str)
-        into_file("te",f_code)
+        into_file("Shipping_industry",f_code)
 
-    into_file("te", tail_str.format(f_alist[start_index],f_alist[end_index]))
+    into_file("Shipping_industry", tail_str.format(f_alist[start_index],f_alist[end_index]))
 
 
 
