@@ -1,0 +1,26 @@
+.set_global_opts(
+        xaxis_opts = opts.AxisOpts(
+            is_show = False,    #隐藏X轴刻度
+        ),
+        yaxis_opts = opts.AxisOpts(
+            is_show = False,    #隐藏Y轴刻度
+        ),
+        legend_opts = opts.LegendOpts(is_show = False),  #隐藏图例
+        title_opts = opts.TitleOpts(title = None),    #隐藏标题
+)
+
+
+
+
+          .set_global_opts(
+            title_opts=opts.TitleOpts(title="US_ZGG", pos_bottom="bottom", pos_right="middle"),
+            # xaxis_opts=opts.AxisOpts(name="x"),
+            yaxis_opts=opts.AxisOpts(
+                # name="y",
+                splitline_opts=opts.SplitLineOpts(is_show=True),
+                is_scale=True,
+
+            ),
+            legend_opts=opts.LegendOpts(is_show=False),  # 隐藏图例
+
+        )
