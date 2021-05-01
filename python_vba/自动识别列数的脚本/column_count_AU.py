@@ -103,7 +103,7 @@ if __name__=="__main__":
     # 1.读取excel文件
 
     # 打开excel
-    wb = xlrd.open_workbook('FXM.xlsx')
+    wb = xlrd.open_workbook('LT_S3.xlsx')
     # 按工作簿定位工作表
     sh = wb.sheet_by_name('Sheet1')
     f_ncols = sh.ncols
@@ -115,13 +115,13 @@ if __name__=="__main__":
 
 
 
-    into_file("FXM",head_str)
+    into_file("LT_S3",head_str)
     for a_i,num in zip(f_alist[start_index:end_index+1],range(3,end_index-start_index+3+1)):
 
         f_code=str_1.format(a_i,num,len_str)
-        into_file("FXM",f_code)
+        into_file("LT_S3",f_code)
 
-    into_file("FXM", tail_str.format(f_alist[start_index],f_alist[end_index]))
+    into_file("LT_S3", tail_str.format(f_alist[start_index],f_alist[end_index]))
 
 
 
