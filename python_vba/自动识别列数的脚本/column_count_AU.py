@@ -103,7 +103,7 @@ if __name__=="__main__":
     # 1.读取excel文件
 
     # 打开excel
-    wb = xlrd.open_workbook('us_js_SM.xlsx')
+    wb = xlrd.open_workbook('F_js20210608_top10.xlsx')
     # 按工作簿定位工作表
     sh = wb.sheet_by_name('Sheet1')
     f_ncols = sh.ncols
@@ -115,13 +115,13 @@ if __name__=="__main__":
 
 
 
-    into_file("us_js_SM",head_str)
+    into_file("F_js20210608_top10",head_str)
     for a_i,num in zip(f_alist[start_index:end_index+1],range(3,end_index-start_index+3+1)):
 
         f_code=str_1.format(a_i,num,len_str)
-        into_file("us_js_SM",f_code)
+        into_file("F_js20210608_top10",f_code)
 
-    into_file("us_js_SM", tail_str.format(f_alist[start_index],f_alist[end_index]))
+    into_file("F_js20210608_top10", tail_str.format(f_alist[start_index],f_alist[end_index]))
 
 
 
