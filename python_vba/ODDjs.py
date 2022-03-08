@@ -18,8 +18,8 @@ for i1 in alphabet:
         f_al =i1+i2
         f_alist.append(f_al)
 
-start_index=f_alist.index("AN") # 修改处1
-end_index=f_alist.index("BV") # 修改处2
+start_index=f_alist.index("DP") # 修改处1
+end_index=f_alist.index("IA") # 修改处2
 len_str =end_index-start_index+3
 def into_file(f_name,item_name):
     try:
